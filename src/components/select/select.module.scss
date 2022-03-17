@@ -1,0 +1,98 @@
+@import "../../styles/colors.scss";
+
+.wrapper {
+  width: 40rem;
+  font-family: Arial, Helvetica, sans-serif;
+
+  .select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $lightGray;
+    max-width: 100%;
+    border-radius: 0.4rem;
+    padding: 1rem 1.6rem;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $gray;
+    }
+
+    .input {
+      font-size: 1.6rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .placeholder {
+      color: $darkGray;
+    }
+  }
+
+  .focused {
+    border: 2px solid $blue;
+
+    &:hover {
+      border: 2px solid $blue;
+    }
+  }
+
+  .optionsContainer {
+    margin-top: 1rem;
+    border: 1px solid $lightGray;
+    max-width: 100%;
+    border-radius: 0.4rem;
+    position: relative;
+    font-size: 1.6rem;
+
+    .search {
+      padding: 1rem 1.6rem;
+      width: 100%;
+      min-width: 100%;
+      border-radius: 0.4rem;
+      border: none;
+      font-size: 1.6rem;
+      border: none;
+      margin: 0.5rem 0;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .options {
+      max-height: 24rem;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        background-color: transparent;
+        width: 1rem;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $snow;
+        border-radius: 0.5rem;
+      }
+    }
+
+    .selectAllContainer {
+      justify-content: flex-end;
+      display: flex;
+      border-top: 1px solid $lightGray;
+
+      .selectAll {
+        padding: 1rem 1.6rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-size: 1.6rem;
+        color: $darkGray;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+}
